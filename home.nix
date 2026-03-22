@@ -1,7 +1,12 @@
-{ config, pkgs, ... }:
 {
-  home.username = "kaungminkhant";
-  home.homeDirectory = "/home/kaungminkhant";
+  config,
+  pkgs,
+  username,
+  ...
+}:
+{
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.05";
   home.packages = with pkgs; [
     # Utilities
@@ -81,7 +86,7 @@
     lt = "eza --tree";
     hh = "home-manager switch --flake .";
   };
-  programs.neovim = { 
+  programs.neovim = {
     enable = true;
     vimAlias = true;
     viAlias = true;
@@ -94,6 +99,8 @@
     source = ./nvim/.config/nvim;
     recursive = true;
   };
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
   programs.home-manager.enable = true;
 }

@@ -1,8 +1,7 @@
 {
-  description = "Home Manager configuration of kaungminkhant";
+  description = "Home Manager configurations";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,19 +12,26 @@
   outputs =
     { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      mkHome =
+        {
+          system,
+          username,
+          modules ? [ ],
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          # Pass the username to be used inside home.nix
+          extraSpecialArgs = { inherit username; };
+          # Combine the base home.nix with any extra modules
+          modules = [ ./home.nix ] ++ modules;
+        };
     in
     {
-      homeConfigurations."kaungminkhant" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+      homeConfigurations = {
+        "kaungminkhant@DESKTOP-JA8S7GL" = mkHome {
+          system = "x86_64-linux";
+          username = "kaungminkhant";
+        };
       };
     };
 }
