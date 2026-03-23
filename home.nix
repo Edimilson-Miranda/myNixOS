@@ -10,7 +10,6 @@
   home.stateVersion = "25.05";
   home.packages = with pkgs; [
     # Utilities
-    git
     curl
     wget
     fastfetch
@@ -18,10 +17,11 @@
     fd
     nh
     ripgrep
-    bat
     gcc
     gnumake
     unzip
+    rustc
+    cargo
   ];
 
   programs.lazygit = {
@@ -31,17 +31,94 @@
         pageSize = 20;
         scrollHeight = 2;
         theme = {
-          activeBorderColor = ["blue" "bold"];
-          inactiveBorderColor = ["white"];
+          activeBorderColor = [
+            "blue"
+            "bold"
+          ];
+          inactiveBorderColor = [ "white" ];
+        };
+      };
+      git = {
+        autoFetch = true;
+        branch = {
+          logOrder = "date-order";
         };
       };
     };
   };
 
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = "crayonnova";
+        email = "kaungminkhant.dev@gmail.com";
+      };
+      alias = {
+        # co = "checkout";
+        # ci = "commit";
+        # st = "status";
+        # br = "branch";
+        # lg = "log --oneline --graph";
+      };
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
+        };
+        push = {
+          autoSetupRemote = true;
+        };
+        pull = {
+          rebase = true;
+        };
+      };
+    };
+  };
+
+  programs.ripgrep = {
+    enable = true;
+    arguments = [
+      "--smart-case"
+      "--hidden"
+      "--glob=!.git/"
+      "--glob=!node_modules/"
+    ];
+  };
+
+  programs.bat = {
+    enable = true;
+    config = {
+      theme = "Dracular";
+      style = "numbers,changes,header";
+      paging = "never";
+    };
+  };
   programs.bash = {
     enable = true;
-    # This makes login shells also source .bashrc
-    profileExtra = "if [ -f \"$HOME/.bashrc\" ]; then . \"$HOME/.bashrc\"; fi";
+    historyControl = [
+      "ignoredups"
+      "ignorespace"
+    ];
+    historyFileSize = 10000;
+    historySize = 10000;
+    shellOptions = [
+      "histappend"
+      "checkwinsize"
+      "extglob"
+      "globstar"
+    ];
+
+    profileExtra = ''
+      if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+      fi
+    '';
+    initExtra = "";
+  };
+
+  programs.tmux = {
+    enable = true;
+    extraConfig = builtins.readFile ./tmux/.tmux.conf;
   };
 
   programs.zoxide = {
@@ -97,7 +174,6 @@
   home.file.".config/nvim" = {
     # source = ~/dotfiles/nvim/.config/nvim;
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim/.config/nvim";
-    
     recursive = true;
   };
   home.sessionVariables = {
