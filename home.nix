@@ -22,6 +22,7 @@
     unzip
     rustc
     cargo
+    uv
   ];
 
   programs.opencode = {
