@@ -208,5 +208,11 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+
+  home.sessionPath = [
+    # Only needed in WSL
+    "$HOME/.npm/bin"
+  ];
+
   programs.home-manager.enable = true;
 }
