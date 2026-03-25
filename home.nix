@@ -24,6 +24,26 @@
     cargo
   ];
 
+  programs.opencode = {
+    enable = true;
+    settings = {
+      model = "opencode/minimax-m2.5-free";
+      mcp = {
+        "nixos" = {
+          "type" = "local";
+          "enabled" = true;
+          "command" = [
+            "uvx"
+            "mcp-nixos"
+          ];
+        };
+      };
+      plugin = [
+        "oh-my-opencode@3.12.3"
+      ];
+    };
+  };
+
   programs.lazygit = {
     enable = true;
     settings = {
@@ -160,6 +180,7 @@
     la = "eza -a";
     lt = "eza --tree";
     hh = "home-manager switch --flake .";
+    kilo = "npx -y --package @kilocode/cli@7.1.2 kilo";
   };
   programs.neovim = {
     enable = true;
