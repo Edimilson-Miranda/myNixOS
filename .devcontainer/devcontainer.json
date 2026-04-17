@@ -6,7 +6,7 @@
       "extraNixConfig": "experimental-features = nix-command flakes"
     }
   },
-  "onCreateCommand": "bash .devcontainer/setup.sh",
+  "onCreateCommand": "nix build .#homeConfigurations.vscode@codespaces.activationPackage",
   "customizations": {
     "vscode": {
       "extensions": [
