@@ -42,6 +42,10 @@
           system = "x86_64-linux";
           username = "crayon";
         };
+        "root@docker" = mkHome {
+          system = "x86_64-linux";
+          username = "root";
+        };
       };
     };
 }
