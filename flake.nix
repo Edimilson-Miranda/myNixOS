@@ -42,9 +42,9 @@
           system = "x86_64-linux";
           username = "crayon";
         };
-        "root@docker" = mkHome {
+        "guest@docker" = mkHome {
           system = "x86_64-linux";
-          username = "root";
+          username = "guest";
         };
       };
     };
