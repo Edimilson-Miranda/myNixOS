@@ -24,6 +24,7 @@
     uv
     nodejs_24
     tree-sitter
+    lsof
     spotify
   ];
 
