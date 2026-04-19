@@ -182,7 +182,15 @@
     ll = "eza -l";
     la = "eza -a";
     lt = "eza --tree";
+
+    # Home-manager
     hh = "home-manager switch --flake .";
+    hhr = "home-manager switch --flake . && gnome-session-quit --logout";
+
+    #NixOS configuration
+    seconfig = "cd /etc/nixos && sudoedit /etc/nixos/configuration.nix";
+    seflake = "cd /etc/nixos && sudoedit /etc/nixos/flake.nix";
+
     kilo = "npx -y --package @kilocode/cli@7.1.2 kilo";
     nvim-fresh = "rm -rf ~/.local/share/nvim/lazy ~/.local/share/nvim/site ~/.cache/nvim && nvim";
   };
