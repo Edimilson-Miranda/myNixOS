@@ -25,7 +25,20 @@
     uv
     nodejs_24
     tree-sitter
+    spotify
   ];
+
+  programs.wezterm = {
+    enable = true;
+  };
+
+  programs.brave = {
+    enable = true;
+  };
+
+  programs.discord = {
+    enable = true;
+  };
 
   programs.opencode = {
     enable = true;
@@ -182,6 +195,7 @@
     ll = "eza -l";
     la = "eza -a";
     lt = "eza --tree";
+    listallusers = "bash ${config.home.homeDirectory}/dotfiles/scripts/listallusers.sh";
 
     # Home-manager
     hh = "home-manager switch --flake .";
