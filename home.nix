@@ -30,6 +30,7 @@
 
   programs.wezterm = {
     enable = true;
+    enableBashIntegration = true;
   };
 
   programs.brave = {

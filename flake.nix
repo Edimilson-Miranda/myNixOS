@@ -36,6 +36,11 @@
           username = "crayon";
         };
 
+        "nova@nixos" = mkHome {
+          system = "x86_64-linux";
+          username = "nova";
+        };
+
         "kaungminkhant@DESKTOP-JA8S7GL" = mkHome {
           system = "x86_64-linux";
           username = "kaungminkhant";
