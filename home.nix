@@ -26,7 +26,15 @@
     tree-sitter
     lsof
     spotify
+    cascadia-code
   ];
+
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = [ "Cascadia Code"];
+    };
+  };
 
   programs.wezterm = {
     enable = true;
