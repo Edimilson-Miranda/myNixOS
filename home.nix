@@ -216,6 +216,9 @@
     seconfig = "cd /etc/nixos && sudoedit /etc/nixos/configuration.nix";
     seflake = "cd /etc/nixos && sudoedit /etc/nixos/flake.nix";
 
+    #edit
+    edotfiles = "cd ~/dotfiles && nvim .";
+
     kilo = "npx -y --package @kilocode/cli@7.1.2 kilo";
     nvim-fresh = "rm -rf ~/.local/share/nvim/lazy ~/.local/share/nvim/site ~/.cache/nvim && nvim";
   };
