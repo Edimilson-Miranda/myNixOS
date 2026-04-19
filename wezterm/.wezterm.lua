@@ -138,10 +138,10 @@ config.scrollback_lines = 5000
 -- PowerShell 7 is recommended over:
 --   - cmd.ex
 --   - Windows PowerShell 5.1
-config.default_prog = {
-	"C:/Program Files/PowerShell/7/pwsh.exe",
-	"-NoLogo",
-}
+-- config.default_prog = {
+-- 	"C:/Program Files/PowerShell/7/pwsh.exe",
+-- 	"-NoLogo",
+-- }
 
 -- =========================================================
 -- KEYBINDINGS (NEOVIM-ALIGNED)
@@ -229,7 +229,7 @@ config.window_padding = {
 	left = 10,
 	right = 10,
 	top = 0,
-	bottom = 0,
+	bottom = 23
 }
 
 -- Quick Select Patterns (instant pattern matching)
