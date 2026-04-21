@@ -22,6 +22,8 @@
     rustc
     cargo
     uv
+    btop
+    biome
     nodejs_24
     tree-sitter
     lsof
@@ -33,6 +35,20 @@
     noto-fonts-color-emoji
     google-chrome
     gnomeExtensions.cloudflare-warp-toggle
+    obsidian
+    vlc
+    webtorrent_desktop
+    wootility
+
+    # Shared (non-wayland specific)
+    xwayland-satellite
+    cosmic-wallpapers
+    gnome-control-center
+    pavucontrol
+    playerctl
+    brightnessctl
+
+    aider-chat-full
   ];
 
   fonts.fontconfig = {
@@ -209,9 +225,10 @@
     #NixOS configuration
     seconfig = "cd /etc/nixos && sudoedit /etc/nixos/configuration.nix";
     seflake = "cd /etc/nixos && sudoedit /etc/nixos/flake.nix";
+    osbuild = "cd /etc/nixos && sudo nixos-rebuild switch --flake .";
 
     #edit
-    edotfiles = "cd ~/dotfiles && nvim .";
+    edot = "cd ~/dotfiles && nvim .";
 
     kilo = "npx -y --package @kilocode/cli@7.1.2 kilo";
     nvim-fresh = "rm -rf ~/.local/share/nvim/lazy ~/.local/share/nvim/site ~/.cache/nvim && nvim";

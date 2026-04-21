@@ -7,10 +7,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    inputs@{ nixpkgs, home-manager, ... }:
     let
       mkHome =
         { system
@@ -24,7 +32,7 @@
             config.allowUnfree = true;
           };
           # Pass the username to be used inside home.nix
-          extraSpecialArgs = { inherit username; };
+          extraSpecialArgs = { inherit username inputs; };
           # Combine the base home.nix with any extra modules
           modules = [ ./home.nix ] ++ modules;
         };
@@ -39,6 +47,7 @@
         "nova@nixos" = mkHome {
           system = "x86_64-linux";
           username = "nova";
+          modules = [ ./modules/wayland.nix ./modules/noctalia.nix ./modules/local-links.nix ];
         };
 
         "kaungminkhant@DESKTOP-JA8S7GL" = mkHome {
