@@ -1,12 +1,11 @@
 { username, ... }:
 {
+  # Minimal configuration for remote development (CLI tools only)
   imports = [
     ./modules/packages.nix
-    ./modules/fonts.nix
     ./modules/shell.nix
     ./modules/cli-tools.nix
-    ./modules/development.nix
-    ./modules/applications.nix
+    ./modules/dev-tools.nix
   ];
 
   home.username = username;

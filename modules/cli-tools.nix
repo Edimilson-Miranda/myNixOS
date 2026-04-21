@@ -1,5 +1,6 @@
 { ... }:
 {
+  # Pure CLI tools and utilities - suitable for remote development
   programs.ripgrep = {
     enable = true;
     arguments = [
@@ -17,5 +18,9 @@
       style = "numbers,changes,header";
       paging = "never";
     };
+  };
+
+  programs.tmux = {
+    enable = true;
   };
 }
