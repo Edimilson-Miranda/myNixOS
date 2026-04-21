@@ -15,6 +15,9 @@
     ];
   };
 
+  # Link nvim config from stow directory
+  xdg.configFile."nvim".source = ../stow/nvim/.config/nvim;
+
   programs.git = {
     enable = true;
     settings = {

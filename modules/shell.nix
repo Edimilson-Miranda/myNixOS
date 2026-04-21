@@ -36,6 +36,9 @@
     enableBashIntegration = true;
   };
 
+  # Link starship config from stow directory
+  xdg.configFile."starship.toml".source = ../stow/starship/.config/starship.toml;
+
   programs.eza = {
     enable = true;
     enableBashIntegration = true;

@@ -23,4 +23,7 @@
   programs.tmux = {
     enable = true;
   };
+
+  # Link tmux config from stow directory
+  home.file.".tmux.conf".source = ../stow/tmux/.tmux.conf;
 }
