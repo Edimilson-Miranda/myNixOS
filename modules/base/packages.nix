@@ -17,6 +17,8 @@
       uv
       nodejs_24
       tree-sitter
+
+      nixd
       biome
       # aider-chat-full
 
