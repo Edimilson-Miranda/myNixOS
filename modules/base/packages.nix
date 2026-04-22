@@ -32,11 +32,6 @@
     noto-fonts-color-emoji
 
     # Applications
-    spotify
-    google-chrome
-    obsidian
-    vlc
-    webtorrent_desktop
     wootility
 
     # Desktop Environment
