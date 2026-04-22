@@ -2,3 +2,4 @@
 .stow-local-ignore
 .agents
 .claude
+.aider*
