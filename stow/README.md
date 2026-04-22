@@ -13,13 +13,13 @@ stow */
 To install specific packages:
 ```bash
 cd stow
-stow nvim tmux wezterm starship opencode
+stow nvim tmux wezterm alacritty fuzzel niri noctalia starship opencode
 ```
 
 To uninstall:
 ```bash
 cd stow
-stow -D nvim tmux wezterm starship opencode
+stow -D nvim tmux wezterm alacritty fuzzel niri noctalia starship opencode
 ```
 
 ## Package Structure
@@ -27,6 +27,10 @@ stow -D nvim tmux wezterm starship opencode
 - `nvim/` - Neovim configuration
 - `tmux/` - Tmux configuration  
 - `wezterm/` - WezTerm terminal configuration
+- `alacritty/` - Alacritty terminal configuration
+- `fuzzel/` - Fuzzel launcher configuration
+- `niri/` - Niri compositor configuration
+- `noctalia/` - Noctalia shell configuration
 - `starship/` - Starship prompt configuration
 - `opencode/` - OpenCode configuration
 

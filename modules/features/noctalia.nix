@@ -6,5 +6,10 @@
     programs.noctalia-shell = {
       enable = true;
     };
+
+    home.file.".config/noctalia" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/stow/noctalia/.config/noctalia";
+      recursive = true;
+    };
   };
 }
