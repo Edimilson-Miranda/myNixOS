@@ -31,15 +31,15 @@
         let
           # Base modules - always included
           baseModules = [
-            ./modules/packages.nix
-            ./modules/shell.nix
-            ./modules/cli-tools.nix
+            ./modules/base/packages.nix
+            ./modules/base/shell.nix
+            ./modules/base/cli-tools.nix
           ];
           
           # Conditional modules based on flags
           conditionalModules = 
-            (if useDevtools then [ ./modules/dev-tools.nix ] else []) ++
-            (if useDesktop then [ ./modules/desktop.nix ] else []) ++
+            (if useDevtools then [ ./modules/features/dev-tools.nix ] else []) ++
+            (if useDesktop then [ ./modules/features/desktop.nix ] else []) ++
             (if useSoftware then [ ./modules/fonts.nix ] else []) ++
             modules;
           
@@ -70,7 +70,7 @@
           useDevtools = true;
           useDesktop = true;
           useSoftware = true;
-          modules = [ ./modules/local-links.nix ];
+          modules = [ ./modules/user/local-links.nix ];
         };
 
         # Full desktop setup with wayland and noctalia
@@ -80,7 +80,7 @@
           useDevtools = true;
           useDesktop = true;
           useSoftware = true;
-          modules = [ ./modules/wayland.nix ./modules/noctalia.nix ./modules/local-links.nix ];
+          modules = [ ./modules/wayland.nix ./modules/noctalia.nix ./modules/user/local-links.nix ];
         };
 
         # Full desktop setup
@@ -117,7 +117,7 @@
           useDevtools = true;
           useDesktop = false;
           useSoftware = false;
-          modules = [ ./modules/codespace.nix ];
+          modules = [ ./modules/system/codespace.nix ];
         };
       };
     };

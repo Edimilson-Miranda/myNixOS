@@ -1,10 +1,10 @@
 { username, ... }:
 {
   imports = [
-    ./modules/packages.nix
+    ./modules/base/packages.nix
     ./modules/fonts.nix
-    ./modules/shell.nix
-    ./modules/cli-tools.nix
+    ./modules/base/shell.nix
+    ./modules/base/cli-tools.nix
     ./modules/development.nix
     ./modules/applications.nix
   ];
