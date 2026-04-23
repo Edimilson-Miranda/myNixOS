@@ -14,6 +14,7 @@ lib.mkIf config.myconfig.features.desktop {
 
     # Launcher
     fuzzel
+    xdg-utils
 
     # Lock/idle/wallpaper
     swaylock
