@@ -53,7 +53,7 @@
     enable = true;
     settings = {
       editor = "nvim";
-      git_protocol = "ssh";
+      git_protocol = "https";
     };
     gitCredentialHelper.enable = true;
   };

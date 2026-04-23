@@ -29,6 +29,5 @@ lib.mkIf config.myconfig.features.desktop {
 
     # Clipboard
     wl-clipboard
-    webtorrent_desktop
   ];
 }

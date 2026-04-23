@@ -4,6 +4,13 @@
 , ...
 }:
 {
+  home.pointerCursor = {
+    enable = config.myconfig.features.desktop;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 24;
+  };
+
   home.packages =
     (with pkgs; [
       # Development Tools
