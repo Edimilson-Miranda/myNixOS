@@ -7,12 +7,12 @@
         }
     ],
     "states": {
-        "port-monitor": {
+        "keybind-cheatsheet": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
-        "privacy-indicator": {
-            "enabled": false,
+        "port-monitor": {
+            "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         }
     },

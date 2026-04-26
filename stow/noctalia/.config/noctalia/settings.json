@@ -23,7 +23,7 @@
         "screenshotAnnotationTool": "",
         "showCategories": true,
         "showIconBackground": false,
-        "sortByMostUsed": true,
+        "sortByMostUsed": false,
         "terminalCommand": "alacritty -e",
         "viewMode": "list"
     },
@@ -42,15 +42,15 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
+        "backgroundOpacity": 0,
         "barType": "floating",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 1,
-        "contentPadding": 2,
+        "capsuleOpacity": 0.76,
+        "contentPadding": 1,
         "density": "comfortable",
         "displayMode": "always_visible",
-        "enableExclusionZoneInset": true,
-        "fontScale": 1,
+        "enableExclusionZoneInset": false,
+        "fontScale": 0.99,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
@@ -61,7 +61,7 @@
         "middleClickFollowMouse": false,
         "monitors": [
         ],
-        "mouseWheelAction": "none",
+        "mouseWheelAction": "volume",
         "mouseWheelWrap": true,
         "outerCorners": true,
         "position": "top",
@@ -74,8 +74,8 @@
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
-        "useSeparateOpacity": false,
-        "widgetSpacing": 6,
+        "useSeparateOpacity": true,
+        "widgetSpacing": 7,
         "widgets": {
             "center": [
                 {
@@ -189,7 +189,7 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
@@ -197,7 +197,7 @@
                 },
                 {
                     "applyToAllMonitors": false,
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Brightness",
                     "textColor": "none"
@@ -210,6 +210,21 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": false
+                },
+                {
+                    "defaultSettings": {
+                        "autoHeight": true,
+                        "cheatsheetData": [
+                        ],
+                        "columnCount": 3,
+                        "detectedCompositor": "",
+                        "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+                        "modKeyVariable": "$mod",
+                        "niriConfigPath": "~/.config/niri/config.kdl",
+                        "windowHeight": 0,
+                        "windowWidth": 1400
+                    },
+                    "id": "plugin:keybind-cheatsheet"
                 }
             ]
         }
@@ -318,28 +333,28 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.91,
         "colorizeIcons": true,
-        "deadOpacity": 0.6,
+        "deadOpacity": 0.23,
         "displayMode": "always_visible",
-        "dockType": "attached",
+        "dockType": "floating",
         "enabled": true,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "groupApps": false,
-        "groupClickAction": "cycle",
-        "groupContextMenuMode": "extended",
-        "groupIndicatorStyle": "dots",
+        "groupClickAction": "list",
+        "groupContextMenuMode": "list",
+        "groupIndicatorStyle": "number",
         "inactiveIndicators": false,
         "indicatorColor": "primary",
-        "indicatorOpacity": 0.6,
+        "indicatorOpacity": 1,
         "indicatorThickness": 6,
         "launcherIcon": "",
         "launcherIconColor": "none",
-        "launcherPosition": "end",
+        "launcherPosition": "start",
         "launcherUseDistroLogo": false,
         "monitors": [
-            "eDP-1",
-            "DP-2"
+            "DP-2",
+            "eDP-1"
         ],
         "onlySameOutput": true,
         "pinnedApps": [
@@ -347,9 +362,9 @@
         "pinnedStatic": false,
         "position": "bottom",
         "showDockIndicator": true,
-        "showLauncherIcon": true,
+        "showLauncherIcon": false,
         "sitOnFrame": false,
-        "size": 1.18
+        "size": 0.53
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
@@ -682,7 +697,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "wall",
+        "wallhavenQuery": "neon city",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
