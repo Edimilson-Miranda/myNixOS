@@ -1,7 +1,8 @@
-{ lib
-, config
-, pkgs
-, ...
+{
+  lib,
+  config,
+  pkgs,
+  ...
 }:
 {
   home.pointerCursor = {
@@ -63,7 +64,7 @@
         pavucontrol
         playerctl
         brightnessctl
-        gnomeExtensions.cloudflare-warp-toggle
+        # gnomeExtensions.cloudflare-warp-toggle
       ]
     );
 }
