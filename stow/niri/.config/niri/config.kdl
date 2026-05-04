@@ -271,7 +271,7 @@ layout {
         // left 64
         // right 64
         // top 64
-        // bottom 64
+        // bottom 35
     }
 }
 
@@ -311,12 +311,53 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // Animation settings.
 // The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
-animations {
+// animations {
     // Uncomment to turn off all animations.
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
+// }
+
+animations {
+    // optional: make all animations bit faster
+    slowdown 0.95
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1200 epsilon=0.0001
+    }
+    window-open {
+        duration-ms 100
+        curve "ease-out-expo"
+    }
+    window-close {
+        duration-ms 100
+        curve "ease-out-quad"
+    }
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=950 epsilon=0.0001
+    }
+    window-movement {
+        spring damping-ratio=1.0 stiffness=950 epsilon=0.0001
+    }
+    window-resize {
+        spring damping-ratio=1.0 stiffness=950 epsilon=0.0001
+    }
+    config-notification-open-close {
+        spring damping-ratio=0.8 stiffness=1200 epsilon=0.001
+    }
+    exit-confirmation-open-close {
+        spring damping-ratio=0.8 stiffness=700 epsilon=0.01
+    }
+    screenshot-ui-open {
+        duration-ms 140
+        curve "ease-out-quad"
+    }
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=950 epsilon=0.0001
+    }
+    recent-windows-close {
+        spring damping-ratio=1.0 stiffness=950 epsilon=0.001
+    }
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -642,3 +683,6 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "./noctalia.kdl"
+
