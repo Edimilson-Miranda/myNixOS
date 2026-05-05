@@ -79,34 +79,12 @@
         "widgets": {
             "center": [
                 {
-                    "clockColor": "none",
-                    "customFont": "Cascadia Code NF SemiBold",
-                    "formatHorizontal": "h:mm AP ddd, MMM dd yyyy",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "transparent",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "showText": false,
-                    "textColor": "none",
-                    "useFixedWidth": false
-                }
-            ],
-            "left": [
-                {
                     "characterCount": 2,
                     "colorizeIcons": true,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
-                    "followFocusedScreen": true,
+                    "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": true,
@@ -120,6 +98,33 @@
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
+                }
+            ],
+            "left": [
+                {
+                    "iconColor": "error",
+                    "id": "SessionMenu"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "primary",
+                    "id": "Network",
+                    "textColor": "tertiary"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "tertiary",
+                    "id": "Bluetooth",
+                    "textColor": "tertiary"
+                },
+                {
+                    "clockColor": "none",
+                    "customFont": "Cascadia Code NF SemiBold",
+                    "formatHorizontal": "h:mm AP ddd, MMM dd yyyy",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false
                 },
                 {
                     "compactMode": false,
