@@ -390,6 +390,9 @@ window-rule {
 window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
+    background-effect {
+      blur true
+    }
 }
 
 debug {
