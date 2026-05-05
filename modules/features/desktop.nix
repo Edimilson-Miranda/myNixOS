@@ -48,6 +48,10 @@
       enable = config.myconfig.features.software;
     };
 
+    programs.claude-code = {
+      enable = config.myconfig.features.software;
+    };
+
     home.file.".config/opencode/opencode.json" = lib.mkIf config.myconfig.features.software {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/stow/opencode/.config/opencode/opencode.json";
     };
