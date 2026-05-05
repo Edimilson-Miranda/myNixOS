@@ -2,7 +2,7 @@
 decorations = "None"
 padding = { x = 12, y = 0 }
 blur = true
-opacity = 0.8
+opacity = 1
 
 [font]
 size = 13.4
