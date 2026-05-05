@@ -83,7 +83,7 @@ config.color_scheme = "Tokyo Night"
 
 -- 1.0 = fully opaque
 -- Below ~0.90 may cause text blur on Windows
-config.window_background_opacity = 1
+config.window_background_opacity = 0.8
 
 -- Text background opacity
 -- Keep at 1.0 for crisp Neovim rendering
