@@ -24,7 +24,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": false,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "kitty",
         "viewMode": "list"
     },
     "audio": {
