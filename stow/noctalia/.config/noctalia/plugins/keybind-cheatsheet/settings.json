@@ -462,6 +462,10 @@
           "desc": "Switch Focus Between Floating And Tiling"
         },
         {
+          "keys": "Super + T",
+          "desc": "Toggle Column Tabbed Display"
+        },
+        {
           "keys": "PrtSc",
           "desc": "Screenshot"
         },

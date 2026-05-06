@@ -296,6 +296,8 @@ layout {
 
 // Noctalia is started directly by niri at session startup.
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "brave"
+spawn-at-startup "kitty"
 // spawn-at-startup "swaybg" "-i" "/home/nova/dotfiles/wallpaper2.jpg" "-m" "fill"
 
 

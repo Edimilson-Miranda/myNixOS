@@ -24,7 +24,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": false,
-        "terminalCommand": "kitty",
+        "terminalCommand": "kitty -e",
         "viewMode": "list"
     },
     "audio": {
@@ -33,7 +33,7 @@
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
         "spectrumMirrored": true,
-        "visualizerType": "linear",
+        "visualizerType": "mirrored",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -283,7 +283,7 @@
                 "id": "audio-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "brightness-card"
             },
             {
@@ -450,7 +450,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,
@@ -509,11 +509,13 @@
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMarkdown": false,
-        "enableMediaToast": false,
+        "enableMediaToast": true,
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
+            "eDP-1",
+            "DP-2"
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
@@ -525,7 +527,7 @@
         },
         "sounds": {
             "criticalSoundFile": "",
-            "enabled": false,
+            "enabled": true,
             "excludedApps": "discord,firefox,chrome,chromium,edge",
             "lowSoundFile": "",
             "normalSoundFile": "",
@@ -664,12 +666,12 @@
     "wallpaper": {
         "automationEnabled": false,
         "directory": "/home/nova/Pictures/Wallpapers",
-        "enableMultiMonitorDirectories": false,
+        "enableMultiMonitorDirectories": true,
         "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
-        "fillMode": "center",
+        "fillMode": "crop",
         "hideWallpaperFilenames": false,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
@@ -677,12 +679,17 @@
                 "directory": "/home/nova/Pictures/Wallpapers",
                 "name": "eDP-1",
                 "wallpaper": ""
+            },
+            {
+                "directory": "/home/nova/Pictures/Wallpapers",
+                "name": "DP-2",
+                "wallpaper": ""
             }
         ],
         "overviewBlur": 0.4,
         "overviewEnabled": true,
         "overviewTint": 0.6,
-        "panelPosition": "center",
+        "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
@@ -692,22 +699,17 @@
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "fade",
-            "disc",
-            "stripes",
-            "wipe",
-            "pixelate",
-            "honeycomb"
+            "wipe"
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": true,
-        "viewMode": "recursive",
+        "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "black star",
+        "wallhavenQuery": "dark line abstract",
         "wallhavenRatios": "21x9",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
