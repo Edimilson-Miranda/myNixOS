@@ -40,7 +40,7 @@
       enable = config.myconfig.features.software;
     };
 
-    programs.discord = {
+    programs.vesktop = {
       enable = config.myconfig.features.software;
     };
 
