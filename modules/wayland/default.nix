@@ -15,8 +15,6 @@
     # programs.niri.enable = true;
     # programs.niri.package = pkgs.niri;
 
-    home.file.".config/niri/config.kdl" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/stow/niri/.config/niri/config.kdl";
-    };
+  
   };
 }

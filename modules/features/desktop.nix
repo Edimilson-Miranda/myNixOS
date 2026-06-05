@@ -12,7 +12,7 @@
     };
 
     programs.kitty = {
-      enable = true;
+      enable = false;
     };
 
     xdg.mimeApps.defaultApplications = {
