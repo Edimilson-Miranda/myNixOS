@@ -15,6 +15,8 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      inherit system;
+        config.allowUnfree = true;
     in
     {
       homeConfigurations."miranda@nixos" = home-manager.lib.homeManagerConfiguration {
