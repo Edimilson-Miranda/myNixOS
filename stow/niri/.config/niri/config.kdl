@@ -487,8 +487,9 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+S { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Space { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+    Mod+S { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Shift+C { spawn-sh "noctalia-shell ipc call launcher clipboard"; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
@@ -499,7 +500,7 @@ binds {
     Mod+B hotkey-overlay-title="Open Zen Browser" { spawn "zen-browser"; }
     Mod+Shift+Z hotkey-overlay-title="Open Zed Editor" { spawn "sh" "-c" "$HOME/.config/niri/Scripts/zed-resize-fix.sh"; }
     //Mod+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
-    Mod+Ctrl+C hotkey-overlay-title="Open OpenCode" { spawn "kitty" "opencode"; }
+    Mod+Ctrl+S hotkey-overlay-title="Open OpenCode" { spawn "kitty" "opencode"; }
     Mod+Ctrl+Return { spawn "kitty" "--class=floating-kitty"; }
     Mod+Shift+O hotkey-overlay-title="Open OBS Studio" { spawn "flatpak" "run" "com.obsproject.Studio"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
