@@ -32,6 +32,9 @@
         vlc
         webtorrent_desktop
         steam
+        adw-gtk3
+        adw-gtk4
+        nwg-look
       ]
     );
     

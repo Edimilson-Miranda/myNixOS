@@ -32,6 +32,8 @@
       vscodium
       firefox
       nemo 
+      teams-for-linux
+      
 
       nixd
       biome

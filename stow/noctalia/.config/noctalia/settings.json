@@ -696,7 +696,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/miranda/Pictures/Wallpapers",
+        "directory": "/home/miranda/Imagens/wallpapers",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
         "favorites": [
@@ -734,7 +734,7 @@
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
-        "useWallhaven": true,
+        "useWallhaven": false,
         "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
