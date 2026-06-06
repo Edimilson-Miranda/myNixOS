@@ -90,6 +90,7 @@
     listallusers = "zsh ${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
 
     # Home-manager
+    su = "cd myNixOS/ && sudo nixos-rebuild switch --flake .#nixos";
     hh = "home-manager switch --flake .";
     hhr = "home-manager switch --flake . && gnome-session-quit --logout";
 
