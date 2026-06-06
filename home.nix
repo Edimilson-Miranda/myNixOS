@@ -25,6 +25,7 @@ in
   options.myconfig = {
     username = mkOption {
       type = types.str;
+      default = "miranda";
       description = "Username for the home directory";
     };
 
@@ -64,7 +65,7 @@ in
       fonts = true;
       software = true;
     };
-    
+
     programs.home-manager.enable = true;
   };
 }

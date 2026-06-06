@@ -27,7 +27,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.miranda = {
-              import ./home.nix;
+              imports [ ./home.nix ];
               config.myconfig.username = "miranda";
             };
           }
