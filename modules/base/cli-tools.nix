@@ -33,9 +33,4 @@
     };
   };
 
-  home.file.".config/nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/myNixOS/stow/nvim";
-    recursive = true;
-  };
-
 }
