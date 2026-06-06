@@ -24,7 +24,7 @@
       cargo
       uv
       nodejs_24
-      tree-sitte
+      tree-sitter
       bat
       git
       lua-language-server
