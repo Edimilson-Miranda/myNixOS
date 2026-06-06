@@ -23,15 +23,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/myNixOS/stow/kitty/.config/kitty/kitty.conf";
     };
 
-    programs.wezterm = {
-      enable = true;
-      enableBashIntegration = false;
-    };
-
-    home.file.".wezterm.lua" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/myNixOS/stow/wezterm/.wezterm.lua";
-    };
-
     home.packages = lib.optionals config.myconfig.features.software (
       with pkgs;
       [

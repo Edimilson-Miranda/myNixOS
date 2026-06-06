@@ -31,6 +31,7 @@
       nil
       vscodium
       firefox
+      nemo 
 
       nixd
       biome
