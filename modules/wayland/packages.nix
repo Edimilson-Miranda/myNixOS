@@ -23,7 +23,6 @@
     swaybg
 
     # Notifications
-    mako
 
     # Screenshot/region
     grim

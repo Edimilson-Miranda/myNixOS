@@ -145,12 +145,23 @@
             ],
             "right": [
                 {
-                    "defaultSettings": {
-                        "hideSystemPorts": false,
-                        "hideWhenEmpty": false,
-                        "refreshInterval": 5
-                    },
-                    "id": "plugin:port-monitor"
+                    "blacklist": [
+                    ],
+                    "chevronColor": "none",
+                    "colorizeIcons": false,
+                    "drawerEnabled": true,
+                    "hidePassive": false,
+                    "id": "Tray",
+                    "pinned": [
+                    ]
+                },
+                {
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
                 },
                 {
                     "defaultSettings": {
@@ -168,22 +179,11 @@
                     "id": "plugin:keybind-cheatsheet"
                 },
                 {
-                    "blacklist": [
-                    ],
-                    "chevronColor": "none",
-                    "colorizeIcons": false,
-                    "drawerEnabled": false,
-                    "hidePassive": false,
-                    "id": "Tray",
-                    "pinned": [
-                    ]
-                },
-                {
                     "hideWhenZero": true,
-                    "hideWhenZeroUnread": true,
+                    "hideWhenZeroUnread": false,
                     "iconColor": "none",
                     "id": "NotificationHistory",
-                    "showUnreadBadge": false,
+                    "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
                 },
                 {
@@ -198,12 +198,6 @@
                     "displayMode": "alwaysShow",
                     "iconColor": "tertiary",
                     "id": "Brightness",
-                    "textColor": "tertiary"
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "primary",
-                    "id": "Network",
                     "textColor": "tertiary"
                 },
                 {
@@ -490,7 +484,7 @@
         "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
-        "density": "default",
+        "density": "compact",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMarkdown": false,
@@ -504,7 +498,7 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": false,
+        "respectExpireTimeout": true,
         "saveToHistory": {
             "critical": true,
             "low": true,
@@ -641,10 +635,6 @@
             },
             {
                 "enabled": true,
-                "id": "discord"
-            },
-            {
-                "enabled": true,
                 "id": "sway"
             },
             {
@@ -686,6 +676,14 @@
             {
                 "enabled": true,
                 "id": "pywalfox"
+            },
+            {
+                "enabled": true,
+                "id": "scroll"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
             }
         ],
         "enableUserTheming": false
