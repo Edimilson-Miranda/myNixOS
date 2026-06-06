@@ -179,14 +179,6 @@
                     "id": "plugin:keybind-cheatsheet"
                 },
                 {
-                    "hideWhenZero": true,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
-                },
-                {
                     "displayMode": "alwaysShow",
                     "iconColor": "tertiary",
                     "id": "Volume",

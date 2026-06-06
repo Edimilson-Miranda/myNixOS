@@ -296,7 +296,7 @@ layout {
 
 // Noctalia is started directly by niri at session startup.
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "brave"
+//spawn-at-startup "brave"
 spawn-at-startup "kitty"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 // spawn-at-startup "swaybg" "-i" "/home/nova/dotfiles/wallpaper2.jpg" "-m" "fill"
@@ -497,7 +497,7 @@ binds {
     Mod+F hotkey-overlay-title="Open File Manager" { spawn "nemo"; }
     Mod+Shift+N hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
     Mod+G hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
-    Mod+B hotkey-overlay-title="Open Zen Browser" { spawn "zen-browser"; }
+    Mod+B hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
     Mod+Shift+Z hotkey-overlay-title="Open Zed Editor" { spawn "sh" "-c" "$HOME/.config/niri/Scripts/zed-resize-fix.sh"; }
     //Mod+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
     Mod+Ctrl+S hotkey-overlay-title="Open OpenCode" { spawn "kitty" "opencode"; }
