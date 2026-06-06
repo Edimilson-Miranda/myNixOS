@@ -23,9 +23,8 @@ lib.mkIf config.myconfig.features.desktop {
 
   home.packages = with pkgs; [
     # Terminal
-    alacritty
     kitty
-    ghostty
+    
 
     # Launcher
     xdg-utils

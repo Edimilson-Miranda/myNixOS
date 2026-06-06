@@ -83,7 +83,7 @@
     ll = "eza -l";
     la = "eza -a";
     lt = "eza --tree";
-    listallusers = "bash ${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
+    listallusers = "zsh ${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
 
     # Home-manager
     hh = "home-manager switch --flake .";

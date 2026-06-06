@@ -30,6 +30,7 @@
       lua-language-server
       nil
       vscodium
+      firefox
 
       nixd
       biome
