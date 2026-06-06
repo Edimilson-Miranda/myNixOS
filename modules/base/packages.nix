@@ -25,6 +25,12 @@
       uv
       nodejs_24
       tree-sitter
+      neovim
+      bat
+      git
+      lua-language-server
+      nil
+      vscodium
 
       nixd
       biome

@@ -18,7 +18,7 @@ in
     ./modules/features/desktop.nix
     ./modules/features/fonts.nix
     ./modules/system/codespace.nix
-    ./modules/wayland
+    ./modules/wayland/default.nix
     ./modules/features/noctalia.nix
   ];
 
@@ -57,6 +57,14 @@ in
     home.homeDirectory = cfg.homeDirectory;
     home.stateVersion = cfg.stateVersion;
 
+
+  myconfig.features = {
+      desktop = true;
+      devtools = true;
+      fonts = true;
+      software = true;
+    };
+    
     programs.home-manager.enable = true;
   };
 }

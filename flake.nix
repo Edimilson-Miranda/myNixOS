@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configurations";
+  description = "NixOS System and Home Manager configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
@@ -14,20 +14,28 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
     in
     {
-      homeConfigurations."miranda@nixos" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [ 
-          ./home.nix
-          ./users/miranda.nix
-          ./profiles/desktop.nix
+      # 1. Configuração do Sistema (NixOS)
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          /etc/nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.miranda = import ./home.nix;
+          }
         ];
+      };
+
+      # 2. Configuração apenas do Home Manager (opcional, para testes rápidos)
+      homeConfigurations."miranda@nixos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home.nix ./users/miranda.nix ./profiles/desktop.nix ];
       };
     };
 }
