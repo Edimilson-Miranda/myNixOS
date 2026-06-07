@@ -8,6 +8,7 @@
 
   let
   spicetify-nix = inputs.spicetify-nix;
+  spice-lib = spicetify-nix.lib.${pkgs.system};
   in
 {
   imports = [ spicetify-nix.homeManagerModules.default ];  
@@ -47,7 +48,7 @@
     
     programs.spicetify = lib.mkIf config.myconfig.features.software {
       enable = true;
-      themes = spicetify-nix.themes.onepunch;
+      theme = spicetify-nix.themes.onepunch;
       enabledExtensions = with spicetify-nix.extensions; [
         adblock
         shuffle
