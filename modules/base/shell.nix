@@ -2,7 +2,6 @@
 {
   programs.fish = {
   enable = true;
-  enableCompletion = true;
  
   interactiveShellInit = ''
     if test -f "$HOME/.secrets"
