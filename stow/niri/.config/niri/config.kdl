@@ -7,9 +7,6 @@
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
 input {
-  //  mod-key "Alt"
-  //  mod-key-nested "Super"
-
     keyboard {
         xkb {
             // You can set rules, model, layout, variant and options.
@@ -503,7 +500,7 @@ binds {
     Mod+G hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
     Mod+B hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
     Mod+Shift+Z hotkey-overlay-title="Open Zed Editor" { spawn "sh" "-c" "$HOME/.config/niri/Scripts/zed-resize-fix.sh"; }
-    //Mod+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    Mod+Z hotkey-overlay-title="Teams-for-linux" { spawn "Teams-for-linux"; }
     Mod+Ctrl+S hotkey-overlay-title="Open OpenCode" { spawn "kitty" "opencode"; }
     Mod+Ctrl+Return { spawn "kitty" "--class=floating-kitty"; }
     Mod+Shift+O hotkey-overlay-title="Open OBS Studio" { spawn "flatpak" "run" "com.obsproject.Studio"; }

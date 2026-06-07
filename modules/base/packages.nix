@@ -33,6 +33,9 @@
       firefox
       nemo 
       teams-for-linux
+      spicetify
+      rclone
+      opencode
       
 
       nixd

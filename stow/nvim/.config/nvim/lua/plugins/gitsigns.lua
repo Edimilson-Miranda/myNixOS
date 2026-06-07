@@ -11,7 +11,7 @@ return {
       ignore_whitespace = false,
     },
 
-    current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> · <summary>" false,
+   -- current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> · <summary>" false,
 
     -- Performance / safety
     watch_gitdir = { follow_files = true },

@@ -82,7 +82,7 @@
 
   home.shellAliases = {
     ll = "eza -l";
-    ls = "eza --icons";
+    la = "eza -a";
     lt = "eza --tree";
     listallusers = "zsh ${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
 
@@ -90,6 +90,7 @@
     rebuild = "cd myNixOS/ && sudo nixos-rebuild switch --flake .#nixos";
     update = "cd / myNixOS/ && sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
     hh = "cd myNixOS/ && home-manager switch --flake .";
+    cleanup = "sudo nix-collect-garbage -d";
     hhr = "home-manager switch --flake . && gnome-session-quit --logout";
 
     # NixOS search
