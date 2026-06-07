@@ -53,6 +53,7 @@
       trash-cli
       ghostscript
       mermaid-cli
+      zoxide
     ])
     ++ lib.optionals config.myconfig.features.fonts (
       with pkgs;
