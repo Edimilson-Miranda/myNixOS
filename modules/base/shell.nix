@@ -82,22 +82,22 @@
 
   home.shellAliases = {
     ll = "eza -l";
-    la = "eza -a";
+    ls = "eza --icons";
     lt = "eza --tree";
     listallusers = "zsh ${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
 
     # Home-manager
-    su = "cd myNixOS/ && sudo nixos-rebuild switch --flake .#nixos";
-    hh = "home-manager switch --flake .";
+    rebuild = "cd myNixOS/ && sudo nixos-rebuild switch --flake .#nixos";
+    update = "cd / myNixOS/ && sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+    hh = "cd myNixOS/ && home-manager switch --flake .";
     hhr = "home-manager switch --flake . && gnome-session-quit --logout";
 
-    # NixOS configuration
-    seconfig = "cd /etc/nixos && sudoedit /etc/nixos/configuration.nix";
-    seflake = "cd /etc/nixos && sudoedit /etc/nixos/flake.nix";
-    osbuild = "cd /etc/nixos && sudo nixos-rebuild switch --flake .";
+    # NixOS search
+    ns = "nix search nixpkgs";
+    nsh = "nix shell nixpkgs";
 
-    # edit
-    edot = "cd ~/myNixOS && nvim .";
+    # edit nvim
+    vi = "cd ~/myNixOS && nvim .";
 
     kilo = "npx -y --package @kilocode/cli@7.1.2 kilo";
     nvim-fresh = "rm -rf ~/.local/share/nvim/lazy ~/.local/share/nvim/site ~/.cache/nvim && nvim";
