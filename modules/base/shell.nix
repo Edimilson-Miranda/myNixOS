@@ -2,8 +2,10 @@
 {
   programs.fish = {
   enable = true;
- 
+
   interactiveShellInit = ''
+    set -g fish_greeting
+ 
     if test -f "$HOME/.secrets"
       source "$HOME/.secrets"
     end
