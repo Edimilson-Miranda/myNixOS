@@ -94,8 +94,8 @@
   users.users."miranda" = {
     isNormalUser = true;
     description = "miranda";
-    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       
     #  thunderbird
