@@ -10,7 +10,7 @@
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
   in
 {
-  imports = [ spicetify-nix.homeManagerModules.default ];  
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];  
 
   config = lib.mkIf config.myconfig.features.desktop {
     gtk.iconTheme = {
