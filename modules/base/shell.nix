@@ -3,9 +3,7 @@
   programs.fish = {
   enable = true;
   enableCompletion = true;
-  autosuggestion.enable = true;
-  syntaxHighlighting.enable = true;
-
+ 
   interactiveShellInit = ''
     if test -f "$HOME/.secrets"
       source "$HOME/.secrets"
