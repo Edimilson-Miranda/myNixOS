@@ -2,9 +2,16 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
+
+  let
+  spicetify-nix = inputs.spicetify-nix;
+  in
 {
+  imports = [ spicetify-nix.homeManagerModules.default ];  
+
   config = lib.mkIf config.myconfig.features.desktop {
     gtk.iconTheme = {
       name = "Papirus-Dark";
@@ -37,6 +44,15 @@
         
       ]
     );
+    
+    programs.spicetify = lib.mkIf config.myconfig.features.software {
+      enable = true;
+      theme = spicetify-nix.themes.onepunch;
+      enabledExtensions = with spicetify-nix.extensions; [
+        adblock
+        shuffle
+      ];
+    };
     
     programs.brave = {
       enable = config.myconfig.features.software;
