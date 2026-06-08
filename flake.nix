@@ -29,7 +29,7 @@
       # 1. Configuração do Sistema (NixOS)
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        extraSpecialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
