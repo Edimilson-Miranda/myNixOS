@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.silentSDDM.nixosModules.defaulta
     ];
 
 	nix.settings.experimental-features = [
@@ -33,6 +34,12 @@
     enable = true;
     # Você pode definir a versão específica do JDK. Ex: pkgs.jdk11, pkgs.jdk17, pkgs.jdk21
     package = pkgs.jdk21; 
+  };
+
+  #Configuração do tema 
+  programs.silentSDDM = {
+    enable = true;
+    theme = "default";
   };
 
 
