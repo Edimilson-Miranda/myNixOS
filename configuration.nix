@@ -124,6 +124,7 @@
     wget
     git
     niri
+    jetbrains-toolbox
 
   ];
 

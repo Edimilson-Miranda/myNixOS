@@ -37,6 +37,7 @@
       opencode
       zed-editor 
       fish
+      bazaar
       
 
       nixd
