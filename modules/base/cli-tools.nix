@@ -47,8 +47,9 @@
       color."1" = "38;2;144;205;226";
     };
 
-    display.separator = "   ";
-  
+    display = {
+        separator = ":   ";
+    };
     modules = [
       "break"
       "break"
