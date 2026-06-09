@@ -80,11 +80,10 @@
     listallusers = "${config.home.homeDirectory}/myNixOS/scripts/listallusers.sh";
 
     # Home-manager
-    rebuild = "cd myNixOS/ && sudo nixos-rebuild switch --flake .#nixos";
-    update = "cd myNixOS/ && sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+    rebuild = "cd ~/myNixOS && sudo nixos-rebuild switch --flake .#nixos";
+    update = "cd ~/myNixOS && sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
     cleanup = "sudo nix-collect-garbage -d";
-    hhr = "home-manager switch --flake . && gnome-session-quit --logout";
-    hh = "cd myNixOS/ && nix run home-manager switch --flake .#miranda@nixos";
+    hh = "cd ~/myNixOS && nix run home-manager -- switch --flake .#miranda@nixos --extra-experimental-features 'nix-command flakes'";
 
     # NixOS search
     ns = "nix search nixpkgs";
