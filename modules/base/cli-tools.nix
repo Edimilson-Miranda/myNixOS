@@ -41,12 +41,18 @@
     logo = {
       source = "~/.config/fastfetch/nixos.txt";
       padding = {
-        top = 2;
+        top =1;
         right = 6;
       };
+      height = 15;
+      width = 35;
       color."1" = "38;2;144;205;226";
     };
-    display.separator = "   ";
+    display = {
+        separator = "   ";
+        keyWidth = 2;
+    };
+
     modules = [
       "break"
       "break"
