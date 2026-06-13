@@ -426,7 +426,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"nemo$"#
-    opacity 0.95
+    opacity 0.8
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -447,6 +447,7 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+    opacity 0.92
     background-effect {
       saturation 1.8
       blur true
