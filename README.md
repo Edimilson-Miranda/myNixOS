@@ -391,11 +391,11 @@ cleanup
 
 | Configuração | Valor |
 |---|---|
-| Username | `miranda` |
+| Username | `` |
 | Shell | Fish |
 | Grupos | `networkmanager`, `wheel` |
-| Git name | `Edimilson-miranda` |
-| Git email | `edimilsonsmp.464@gmail.com` |
+| Git name | `` |
+| Git email | `` |
 | State Version | `26.05` |
 
 ---
