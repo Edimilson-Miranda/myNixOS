@@ -489,9 +489,9 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn-sh "noctalia ipc call launcher toggle"; }
-    Mod+S     { spawn-sh "noctalia ipc call controlCenter toggle"; }
-    Mod+Shift+C { spawn-sh "noctalia ipc call launcher clipboard"; }
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S     { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+C { spawn-sh "noctalia msg settings-toggle"; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
