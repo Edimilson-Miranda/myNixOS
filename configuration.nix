@@ -2,41 +2,45 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.silentSDDM.nixosModules.default
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.silentSDDM.nixosModules.default
+  ];
 
-	nix.settings.experimental-features = [
-  "nix-command"
-  "flakes"
-];
-# Automatic updating
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  # Automatic updating
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
 
-#  Automatic cleanup
+  #  Automatic cleanup
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 10d";
+  nix.gc.options = "--delete-older-than 5d";
   nix.settings.auto-optimise-store = true;
 
-
- programs.fish.enable = true;
- programs.niri.enable = true;
+  programs.fish.enable = true;
+  programs.niri.enable = true;
 
   # Habilita o suporte a Java no sistema
   programs.java = {
     enable = true;
     # Você pode definir a versão específica do JDK. Ex: pkgs.jdk11, pkgs.jdk17, pkgs.jdk21
-    package = pkgs.jdk21; 
+    package = pkgs.jdk21;
   };
 
-  #Configuração do tema 
+  #Configuração do tema
   programs.silentSDDM = {
     enable = true;
     theme = "default";
@@ -44,8 +48,7 @@
 
   systemd.services.fwupd-refresh.enable = false;
 
-
- # Bootloader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -83,7 +86,6 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -121,15 +123,18 @@
     isNormalUser = true;
     description = "miranda";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-      
-    #  thunderbird
+
+      #  thunderbird
     ];
   };
 
   # Install firefox.
- 
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -141,7 +146,7 @@
     git
     niri
     jetbrains.idea
-    stow 
+    stow
 
   ];
 

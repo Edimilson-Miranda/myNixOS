@@ -298,7 +298,7 @@ environment {
 }
 
 // Noctalia is started directly by niri at session startup.
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 //spawn-at-startup "brave"
 //spawn-at-startup "kitty"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
@@ -489,9 +489,9 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-    Mod+S { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
-    Mod+Shift+C { spawn-sh "noctalia-shell ipc call launcher clipboard"; }
+    Mod+Space { spawn-sh "noctalia ipc call launcher toggle"; }
+    Mod+S     { spawn-sh "noctalia ipc call controlCenter toggle"; }
+    Mod+Shift+C { spawn-sh "noctalia ipc call launcher clipboard"; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
