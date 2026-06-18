@@ -43,7 +43,7 @@
       mpv
       obs-studio
       zip
-      ark
+      kdePackages.ark
 
       nixd
       biome
