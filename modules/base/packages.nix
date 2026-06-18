@@ -42,6 +42,8 @@
       gpu-screen-recorder-gtk
       mpv
       obs-studio
+      zip
+      ark
 
       nixd
       biome
