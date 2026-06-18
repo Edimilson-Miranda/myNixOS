@@ -13,7 +13,7 @@
     };
 
     home.file.".config/noctalia" = {
-      source = "${config.home.homeDirectory} .stow/noctalia/.config/noctalia";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/myNixOS/stow/noctalia/.config/noctalia";
       recursive = true;
     };
   };
