@@ -298,7 +298,7 @@ environment {
 }
 
 // Noctalia is started directly by niri at session startup.
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 //spawn-at-startup "brave"
 //spawn-at-startup "kitty"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
