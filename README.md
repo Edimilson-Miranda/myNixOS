@@ -84,7 +84,7 @@ nixos-config/
 | Filesystem raiz | ext4 |
 | Audio | PipeWire (sem PulseAudio) |
 | Display Manager | SDDM com tema **SilentSDDM** |
-| Desktop Environment | KDE Plasma 6 (base) + **Niri** (Wayland principal) |
+| Desktop Environment |**Niri** (Wayland principal) |
 | Shell padrão do usuário | Fish |
 | Java | JDK 21 |
 
