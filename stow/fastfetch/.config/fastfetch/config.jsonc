@@ -1,150 +1,195 @@
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-
   "logo": {
-    "type": "small",
+    "type": "auto",
+    "source": "~/.config/fastfetch/logo/nixos_logo_1.webp",
+    "height": 10,
+    "width": 10,
     "padding": {
-      "top": 2,
-      "right": 4,
+      "top": 8,
+      "left": 3,
     },
   },
-
   "display": {
-    "separator": "  ",
+    "separator": " ",
+    "constants": [
+      "\u001b[38;2;81;188;254m\u001B[1m", // {$1},
+      "\u001b[38;2;105;181;254m\u001B[1m", // {$2},
+      "\u001b[38;2;130;173;253m\u001B[1m", // {$3},
+      "\u001b[38;2;154;166;253m\u001B[1m", // {$4},
+      "\u001b[38;2;169;160;253m\u001B[1m", // {$5},
+      "\u001b[38;2;179;154;253m\u001B[1m", // {$6},
+      "\u001b[38;2;186;153;253m\u001B[1m", // {$7},
+      "\u001b[38;2;192;163;253m\u001B[1m", // {$8},
+      "\u001b[38;2;198;167;253m\u001B[1m", // {$9},
+      "\u001b[38;2;205;173;252m\u001B[1m", // {$10},
+      "┌──────", // {$11},
+      "───────", // {$12},
+      "──────┐", // {$13},
+    ],
+    "percent": {
+      "type": 9, // 1=number, 2=bar, 3=both, 9=colored number
+      "color": {
+        "green": "#51bcfe",
+        "yellow": "#abff4a",
+        "red": "#ff8f45",
+      },
+    },
   },
-
   "modules": [
+    "break",
     {
-      "type": "title",
-      "keyWidth": 10,
+      "type": "version",
+      "color": {
+        "keys": "",
+      },
+      "key": "{$4}                󱐋󱐋 Fastfetch ",
+      "format": "{$6}{2}",
     },
-
-    {
-      "type": "break",
-    },
-
     {
       "type": "custom",
-      "format": "══════ Sistema ══════",
+      "format": "{$1}{$11}{$2}{$12}{$3}{$12}{$4}{$12}{$5}{$12}{$6}{$12}{$7}{$12}{$8}{$12}{$9}{$12}{$10}{$13}  ",
     },
     {
-      "type": "os",
-      "key": " ",
-      "keyColor": "#90CDE2",
+      "type": "host",
+      "key": "{$1}├   PC        ",
     },
-    {
-      "type": "kernel",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "packages",
-      "format": "{} (nix)",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "shell",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "terminal",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "wm",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "command",
-      "key": "󰧨 ",
-      "keyColor": "#90CDE2",
-      "text": "niri --version | awk '{print $2}'",
-    },
-    {
-      "type": "command",
-      "key": "󰉼 ",
-      "keyColor": "#90CDE2",
-      "text": "gsettings get org.gnome.desktop.interface gtk-theme | tr -d \"'\"",
-    },
-    {
-      "type": "cursor",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "terminalfont",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-    {
-      "type": "uptime",
-      "key": " ",
-      "keyColor": "#90CDE2",
-    },
-
-    {
-      "type": "break",
-    },
-
-    {
-      "type": "custom",
-      "format": "══════ Hardware ══════",
-    },
-
     {
       "type": "cpu",
-      "format": "{1} ({3}) @ {7} GHz",
-      "key": " ",
-      "keyColor": "#EBDCB2",
+      "key": "{$3}├   CPU       ",
     },
     {
       "type": "gpu",
-      "format": "{1}",
-      "key": "󰢮 ",
-      "keyColor": "#EBDCB2",
-    },
-    {
-      "type": "memory",
-      "key": " ",
-      "keyColor": "#EBDCB2",
+      "key": "{$4}├ 󰾲  GPU       ",
     },
     {
       "type": "display",
-      "key": "󰍹 ",
-      "keyColor": "#EBDCB2",
+      "key": "{$5}├ 󰍹  Display   ",
     },
     {
-      "type": "disk",
-      "folders": "/",
-      "key": "󰉉 ",
-      "keyColor": "#EBDCB2",
+      "type": "sound",
+      //"format": "{platform-api}/{2} ({3})",
+      "key": "{$6}├   Sound     ",
+    },
+    {
+      "type": "memory",
+      "key": "{$7}├   Memory    ",
+      "percent": {
+        "type": 3, // 3 = show number + bar + percentage
+        "green": 30, // <30% is green
+        "yellow": 70, // 30-70% is yellow, >70% is red
+      },
+    },
+    {
+      "type": "swap",
+      "key": "{$8}├ 󰯍  Swap      ",
+      "percent": {
+        "type": 3, // 3 = show number + bar + percentage
+        "green": 30, // <30% is green
+        "yellow": 70, // 30-70% is yellow, >70% is red
+      },
     },
 
     {
-      "type": "break",
+      "type": "disk",
+      "key": "{$9}├   NixOS     ",
+      "folders": ["/"],
+      "percent": {
+        "type": 3, // 3 = show number + bar + percentage
+        "green": 30, // <30% is green
+        "yellow": 70, // 30-70% is yellow, >70% is red
+      },
+    },
+    {
+      "type": "disk",
+      "key": "{$10}└   Home      ",
+      "folders": ["/home"],
+      "percent": {
+        "type": 3, // 3 = show number + bar + percentage
+        "green": 30, // <30% is green
+        "yellow": 70, // 30-70% is yellow, >70% is red
+      },
+    },
+    {
+      "type": "custom",
+      "format": "{$10}{$11}{$9}{$12}{$8}{$12}{$7}{$12}{$6}{$12}{$5}{$12}{$4}{$12}{$3}{$12}{$2}{$12}{$1}{$13}  ",
+    },
+    {
+      "type": "os",
+      "key": "{$10}├   Distro    ",
+      "format": "{name} {build-id} ({codename}) {arch}",
+    },
+    {
+      "type": "kernel",
+      "key": "{$10}├   Kernel    ",
+    },
+
+    {
+      "type": "packages",
+      "key": "{$9}├ 󰏖  Packages  ",
+    },
+    {
+      "type": "Processes",
+      "key": "{$9}├ 󰑮  Processes ",
+    },
+    {
+      "type": "shell",
+      "key": "{$8}├   Shell     ",
+    },
+    {
+      "type": "terminal",
+      "key": "{$7}├   Terminal  ",
+    },
+    {
+      "type": "terminalfont",
+      "key": "{$6}├ 󰛖  Term Font ",
+    },
+    {
+      "type": "de",
+      "key": "{$5}├   DE        ",
+    },
+    {
+      "type": "lm",
+      "key": "{$4}├ 󰧨  Login     ",
+    },
+    {
+      "type": "wm",
+      "key": "{$3}├   Window    ",
+    },
+    {
+      "type": "wmtheme",
+      "key": "{$2}├ 󰉼  Theme     ",
+    },
+    {
+      "type": "font",
+      "key": "{$2}├ 󰛖  Font      ",
+    },
+    {
+      "type": "opengl",
+      "key": "{$1}├ 󰆧  OpenGL    ",
+    },
+    {
+      "type": "vulkan",
+      "key": "{$1}└ 󰈸  Vulkan    ",
     },
 
     {
       "type": "custom",
-      "format": "══════ Extras ══════",
+      "format": "{$10}{$11}{$9}{$12}{$8}{$12}{$7}{$12}{$6}{$12}{$5}{$12}{$4}{$12}{$3}{$12}{$2}{$12}{$1}{$13}  ",
     },
 
     {
-      "type": "command",
-      "key": " ",
-      "keyColor": "#D3869B",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); echo $(((current-birth_install)/86400)) dias",
+      "key": "{$6}├   OS Age    ",
+      "type": "disk",
+      "folders": "/",
+      "format": "{days} days",
     },
-
     {
-      "type": "colors",
-      "symbol": "circle",
-      "key": " ",
-      "keyColor": "#EBDCB2",
+      "type": "uptime",
+      "key": "{$3}└   Uptime    ",
+    },
+    {
+      "type": "custom",
+      "format": "                {$10}󱄅 {$9}󱄅 {$8}󱄅 {$7}󱄅 {$6}󱄅 {$5}󱄅 {$4}󱄅 {$3}󱄅 {$2}󱄅 {$1}󱄅",
     },
   ],
 }
