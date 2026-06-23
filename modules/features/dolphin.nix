@@ -30,22 +30,9 @@
     qt = {
       enable = true;
       platformTheme.name = "qt6ct";
-      style = {
-        name = "breeze";
-        package = pkgs.kdePackages.breeze;
-      };
     };
     ############################
-    # QT6CT - Tema Dolphin
-    ############################
-    xdg.configFile."qt6ct/qt6ct.conf".text = ''
-      [Appearance]
-      style=Fusion
-      color_scheme_path=/home/miranda/.config/qt6ct/colors/noctalia.conf
-      icon_theme=breeze-dark
-    '';
-    ############################
-    # MIME / Abrir com
+    # XDG + QT6CT + MIME
     ############################
     xdg = {
       enable = true;
@@ -54,25 +41,33 @@
       mimeApps.defaultApplications = {
         "inode/directory" = "org.kde.dolphin.desktop";
       };
-      configFile."menus/applications.menu".text = ''
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE Menu PUBLIC
-        "-//freedesktop//DTD Menu 1.0//EN"
-        "http://www.freedesktop.org/standards/menu-spec/menu.dtd">
-        <Menu>
-          <Name>Applications</Name>
-          <DefaultAppDirs/>
-          <DefaultDirectoryDirs/>
-          <Include>
-            <All/>
-          </Include>
-          <DefaultLayout>
-            <Merge type="menus"/>
-            <Merge type="files"/>
-          </DefaultLayout>
-          <DefaultMergeDirs/>
-        </Menu>
-      '';
+      configFile = {
+        "qt6ct/qt6ct.conf".text = ''
+          [Appearance]
+          style=Breeze
+          color_scheme_path=/home/miranda/.config/qt6ct/colors/noctalia.conf
+          icon_theme=breeze-dark
+        '';
+        "menus/applications.menu".text = ''
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE Menu PUBLIC
+          "-//freedesktop//DTD Menu 1.0//EN"
+          "http://www.freedesktop.org/standards/menu-spec/menu.dtd">
+          <Menu>
+            <Name>Applications</Name>
+            <DefaultAppDirs/>
+            <DefaultDirectoryDirs/>
+            <Include>
+              <All/>
+            </Include>
+            <DefaultLayout>
+              <Merge type="menus"/>
+              <Merge type="files"/>
+            </DefaultLayout>
+            <DefaultMergeDirs/>
+          </Menu>
+        '';
+      };
     };
     ############################
     # Cache KDE
