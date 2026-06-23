@@ -34,6 +34,8 @@
       qt6.qtwayland
 
       qt6Packages.qt6ct
+      catppuccin-qt5ct
+
     ];
 
     ############################
@@ -87,6 +89,18 @@
 
       Translucency=true
 
+    '';
+
+    ############################
+    # QT6CT - Tema Dolphin
+    ############################
+
+    xdg.configFile."qt6ct/qt6ct.conf".text = ''
+
+      [Appearance]
+       style=Breeze
+       color_scheme_path=/home/miranda/.config/qt6ct/colors/noctalia.conf
+       icon_theme=breeze-dark
     '';
 
     ############################
