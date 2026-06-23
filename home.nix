@@ -20,6 +20,7 @@ in
     ./modules/system/codespace.nix
     ./modules/wayland/default.nix
     ./modules/features/noctalia.nix
+    ./modules/features/dolphin.nix
   ];
 
   options.myconfig = {
@@ -58,8 +59,7 @@ in
     home.homeDirectory = cfg.homeDirectory;
     home.stateVersion = cfg.stateVersion;
 
-
-  myconfig.features = {
+    myconfig.features = {
       desktop = true;
       devtools = true;
       fonts = true;

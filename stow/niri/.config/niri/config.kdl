@@ -384,7 +384,7 @@ window-rule {
     match app-id=r#"^(discord|vesktop|Vesktop)$"#
 
     // Make the window translucent.
-    opacity 0.8
+    opacity 0.75
 
     // Rounded corners look better with transparency.
     geometry-corner-radius 12
@@ -427,8 +427,25 @@ window-rule {
 
 window-rule {
     match app-id=r#"nemo$"#
-    opacity 0.8
+    opacity 0.75
 }
+
+window-rule {
+
+    match app-id="org.kde.dolphin"
+
+
+    opacity 0.75
+
+
+    shadow {
+
+        on
+
+    }
+
+}
+
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -448,7 +465,7 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
-    opacity 0.92
+    opacity 0.95
     background-effect {
       saturation 1.8
       blur true
