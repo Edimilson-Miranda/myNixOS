@@ -26,8 +26,6 @@
       kdePackages.kdialog
       kdePackages.kde-cli-tools
 
-      kdePackages.plasma-integration
-
       kdePackages.breeze
       kdePackages.breeze-icons
 
@@ -98,7 +96,7 @@
     xdg.configFile."qt6ct/qt6ct.conf".text = ''
 
       [Appearance]
-       style=Breeze
+       style=Fusion
        color_scheme_path=/home/miranda/.config/qt6ct/colors/noctalia.conf
        icon_theme=breeze-dark
     '';
@@ -238,7 +236,7 @@
 
       QT_QPA_PLATFORMTHEME = "qt6ct";
 
-      QT_STYLE_OVERRIDE = "breeze";
+      KDEGLOBALS_COLORSCHEMEID = "";
 
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
 
