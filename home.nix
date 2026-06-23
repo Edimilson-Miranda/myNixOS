@@ -20,7 +20,7 @@ in
     ./modules/system/codespace.nix
     ./modules/wayland/default.nix
     ./modules/features/noctalia.nix
-    ./modules/features/dolphin.nix
+
   ];
 
   options.myconfig = {
