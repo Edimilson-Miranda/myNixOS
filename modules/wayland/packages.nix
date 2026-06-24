@@ -31,11 +31,5 @@
     wl-clipboard
     cliphist
 
-    # Dolphin + Qt/Noctalia
-    kdePackages.dolphin
-    kdePackages.qtsvg
-    kdePackages.qqc2-desktop-style
-    kdePackages.kvantum
-    kdePackages.qt6ct
   ];
 }

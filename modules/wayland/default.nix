@@ -15,9 +15,5 @@
     # programs.niri.enable = true;
     # programs.niri.package = pkgs.niri;
 
-    home.sessionVariables = {
-      QT_QPA_PLATFORMTHEME = "qt6ct";
-      QT_STYLE_OVERRIDE = "kvantum";
-    };
   };
 }
