@@ -44,7 +44,14 @@
       obs-studio
       zip
       kdePackages.ark
-      kdePackages.dolphin
+      dolphin
+      kdePackages.dolphin # ou kde5.dolphin dependendo da versão
+      kdePackages.qtsvg # ícones SVG no Dolphin
+      kdePackages.breeze # fallback de estilo Qt
+      libsForQt5.qt5ct # configurador Qt5 (se usar Qt5)
+      kdePackages.qt6ct # configurador Qt6
+      kvantum # motor de estilo Qt — essencial
+      kdePackages.qqc2-desktop-style
 
       nixd
       biome
