@@ -44,6 +44,7 @@
       obs-studio
       zip
       kdePackages.ark
+      kdePackages.dolphin
 
       nixd
       biome
