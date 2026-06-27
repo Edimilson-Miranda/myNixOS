@@ -295,6 +295,7 @@ layout {
 
 environment {
   QT_QPA_PLATFORMTHEME "qt6ct"
+  QT_STYLE_OVERRIDE "kvantum"
 }
 
 // Noctalia is started directly by niri at session startup.

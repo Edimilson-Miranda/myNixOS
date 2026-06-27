@@ -6,11 +6,11 @@
   ...
 }:
 
-  let
+let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
-  in
+in
 {
-  imports = [ inputs.spicetify-nix.homeManagerModules.default ];  
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   config = lib.mkIf config.myconfig.features.desktop {
     gtk.iconTheme = {
@@ -39,16 +39,30 @@
         steam
         adw-gtk3
         nwg-look
-        
+
+        # KDE/Dolphin
+        kdePackages.dolphin
+        kdePackages.qtsvg
+        kdePackages.kio
+        kdePackages.kio-extras
+        kdePackages.kio-fuse
+
+        # Qt theme
+        qt6ct
+        kdePackages.qtstyleplugin-kvantum
+        libsForQt5.qtstyleplugin-kvantum
+
+        # icons
+        papirus-icon-theme
       ]
     );
-    
+
     programs.spicetify = lib.mkIf config.myconfig.features.software {
-    enable = true;
-    theme = spicePkgs.themes.onepunch;          
-    enabledExtensions = with spicePkgs.extensions; [
-      adblockify                                 
-      shuffle
+      enable = true;
+      theme = spicePkgs.themes.onepunch;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblockify
+        shuffle
       ];
     };
 

@@ -1,0 +1,11 @@
+[General]
+ColorScheme=Noctalia
+
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+LookAndFeelPackage=org.kde.breezedark.desktop
+
+[UiSettings]
+ColorScheme=Noctalia
