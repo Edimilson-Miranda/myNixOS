@@ -48,7 +48,9 @@ in
         kdePackages.kio-fuse
 
         # Qt theme
-        qt6ct
+        qt6Packages.qt6ct
+
+        # Kvantum
         kdePackages.qtstyleplugin-kvantum
         libsForQt5.qtstyleplugin-kvantum
 
