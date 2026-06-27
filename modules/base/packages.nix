@@ -43,6 +43,7 @@
       mpv
       obs-studio
       zip
+      gnome-disk-utility
 
       nixd
       biome

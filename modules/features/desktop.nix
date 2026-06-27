@@ -58,6 +58,7 @@ in
 
         # icons
         papirus-icon-theme
+        catppuccin-gtk
       ]
     );
 
