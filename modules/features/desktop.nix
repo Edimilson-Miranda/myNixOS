@@ -54,6 +54,8 @@ in
         kdePackages.qtstyleplugin-kvantum
         libsForQt5.qtstyleplugin-kvantum
 
+        catppuccin-kvantum
+
         # icons
         papirus-icon-theme
       ]
