@@ -31,7 +31,6 @@
       nil
       vscodium
       firefox
-      nemo
       teams-for-linux
       rclone
       opencode

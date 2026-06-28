@@ -505,7 +505,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "vesktop"; }
-    Mod+F hotkey-overlay-title="Open File Manager" { spawn "nemo"; }
+    Mod+F hotkey-overlay-title="Open File Manager" { spawn "dolphin"; }
     Mod+Shift+N hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
     Mod+G hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
     Mod+B hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
