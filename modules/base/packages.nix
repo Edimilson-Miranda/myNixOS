@@ -43,6 +43,7 @@
       obs-studio
       zip
       gnome-disk-utility
+      kdePackages.ark
 
       nixd
       biome
